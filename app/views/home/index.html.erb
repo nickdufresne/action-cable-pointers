@@ -1,0 +1,13 @@
+<div class="container home">
+  <div class="name-input-container">
+    <h1>Welcome!</h1>
+    <%= form_tag square_path, method: :get, class: "name-form" do %>
+      <div class="form-group">
+        <%= label_tag :name, "Enter your name:" %>
+        <%= text_field_tag :name, nil, class: "form-control", required: true %>
+        <%= hidden_field_tag :user_id, SecureRandom.uuid %>
+      </div>
+      <%= submit_tag "Connect", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div> 

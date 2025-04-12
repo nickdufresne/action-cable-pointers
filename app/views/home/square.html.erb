@@ -1,0 +1,14 @@
+<div class="container square">
+  <h1>Welcome, <%= @user_name %>!</h1>
+  <div class="square-container">
+    <div id="interactive-square" 
+         data-user-id="<%= @user_id %>" 
+         data-user-name="<%= @user_name %>">
+      <!-- Balls will be dynamically added here -->
+    </div>
+  </div>
+  <div class="reload-link">
+    <p>If you need to reload the page, use this link to maintain your identity:</p>
+    <%= link_to "Reload with same identity", square_path(name: @user_name, user_id: @user_id), class: "btn btn-secondary" %>
+  </div>
+</div> 
