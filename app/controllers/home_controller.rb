@@ -6,4 +6,4 @@ class HomeController < ApplicationController
     @user_name = params[:name]
     @user_id = params[:user_id] || SecureRandom.uuid
   end
-end 
+end

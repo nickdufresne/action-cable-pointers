@@ -10,4 +10,4 @@ class CreateUserPositions < ActiveRecord::Migration[8.0]
 
     add_index :user_positions, :user_id, unique: true
   end
-end 
+end

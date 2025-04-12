@@ -1,4 +1,4 @@
-require 'ostruct'
+require "ostruct"
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
     identified_by :current_user
@@ -6,7 +6,7 @@ module ApplicationCable
     def connect
       puts "Connection established"
       self.current_user = find_verified_user
-      logger.add_tags 'ActionCable', current_user.id
+      logger.add_tags "ActionCable", current_user.id
     end
 
     private
@@ -17,4 +17,4 @@ module ApplicationCable
       OpenStruct.new(id: SecureRandom.uuid, name: "John Doe")
     end
   end
-end 
+end

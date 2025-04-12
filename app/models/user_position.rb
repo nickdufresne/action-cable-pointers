@@ -24,4 +24,4 @@ class UserPosition < ApplicationRecord
   def self.cleanup_inactive_positions
     where("updated_at < ?", 1.minute.ago).destroy_all
   end
-end 
+end
